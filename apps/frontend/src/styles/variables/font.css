@@ -1,0 +1,17 @@
+:root {
+  --font-family: 'Public Sans', sans-serif;
+
+  --font-size-preset-1: 2rem /* 32px */;
+  --font-size-preset-2: 1.25rem /* 20px */;
+  --font-size-preset-3: 1rem /* 16px */;
+  --font-size-preset-4: 0.875rem /* 14px */;
+  --font-size-preset-5: 0.75rem /* 12px */;
+
+  --line-height-120: 120%;
+  --line-height-150: 150%;
+
+  --letter-spacing-0: 0px;
+
+  --font-weight-bold: 700;
+  --font-weight-regular: 400;
+}

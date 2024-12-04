@@ -1,0 +1,14 @@
+@import url(./fonts.css);
+@import url(./variables/index.css);
+
+html,
+body,
+#app {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: var(--beige-100);
+  font-family: var(--font-family);
+}

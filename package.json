@@ -1,0 +1,14 @@
+{
+  "name": "root",
+  "private": true,
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "lerna run start  --stream"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "lerna": "^8.1.9"
+  }
+}
