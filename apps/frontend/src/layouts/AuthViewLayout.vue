@@ -1,6 +1,5 @@
 <template>
   <main>
-    auth
     <slot></slot>
 
     <AppLoading></AppLoading>

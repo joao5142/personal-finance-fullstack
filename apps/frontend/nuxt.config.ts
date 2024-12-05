@@ -1,7 +1,10 @@
+import { fileURLToPath } from 'url'
+import { dirname, join } from 'path'
 import { NuxtPage } from 'nuxt/schema'
 import { createResolver } from '@nuxt/kit'
 
 const { resolve } = createResolver(import.meta.url)
+const currentDir = dirname(fileURLToPath(import.meta.url))
 
 export default defineNuxtConfig({
   devtools: {
@@ -11,8 +14,14 @@ export default defineNuxtConfig({
       enabled: true,
     },
   },
+  ssr: false,
+
+  rootDir: __dirname,
   srcDir: 'src/',
-  ssr: true,
+
+  dir: { public: '../public' },
+
+  serverDir: '../server',
 
   app: {
     head: {
@@ -29,6 +38,12 @@ export default defineNuxtConfig({
 
   hooks: {
     'pages:extend'(pages) {
+      pages.push({
+        name: 'home',
+        path: '/',
+        file: '@/pages/auth/login',
+      })
+
       // remove @components and @types from router matching inside pages folder
       function acceptPagesMatching(pages: NuxtPage[] = []) {
         const pagesToRemove = []
@@ -107,14 +122,6 @@ export default defineNuxtConfig({
   },
 
   shadcn: {
-    /**
-     * Prefix for all the imported component
-     */
-    prefix: '',
-    /**
-     * Directory that the component lives in.
-     * @default "./components/ui"
-     */
     componentDir: './components/ui',
   },
 })
