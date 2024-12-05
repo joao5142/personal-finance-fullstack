@@ -2,7 +2,7 @@
   "name": "root",
   "private": true,
   "workspaces": [
-    "apps/*"
+    "apps/**"
   ],
   "scripts": {
     "dev": "lerna run start  --stream"
