@@ -5,28 +5,21 @@ export { default as Text } from './Text.vue'
 export const textVariants = cva('', {
   variants: {
     size: {
-      xs: 'text-xs',
-      sm: 'text-sm',
-      md: 'text-md',
-      lg: 'text-lg',
-      xl: 'text-xl',
-      '2xl': 'text-2xl',
-      '3xl': 'text-3xl',
-      '4xl': 'text-4xl',
-      '5xl': 'text-5xl',
+      preset1: 'text-app-preset-1',
+      preset2: 'text-app-preset-2',
+      preset3: 'text-app-preset-3',
+      preset4: 'text-app-preset-4',
+      preset5: 'text-app-preset-5',
     },
 
     weight: {
-      '400': 'font-normal',
-      '500': 'font-medium',
-      '600': 'font-semibold',
-      '700': 'font-bold',
-      '800': 'font-extrabold',
-      '900': 'font-black',
+      '400': 'font-app-regular',
+
+      '700': 'font-app-bold',
     },
   },
   defaultVariants: {
-    size: 'md',
+    size: 'preset3',
     weight: '400',
   },
 })

@@ -19,6 +19,7 @@ interface Props extends PrimitiveProps {
 
 const props = withDefaults(defineProps<Props>(), {
   as: 'span',
+  size: 'preset3',
   weight: '400',
 })
 </script>
