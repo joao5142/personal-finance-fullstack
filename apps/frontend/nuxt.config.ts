@@ -23,6 +23,8 @@ export default defineNuxtConfig({
 
   serverDir: '../server',
 
+  modulesDir: [resolve(__dirname, '../node_modules/')],
+
   app: {
     head: {
       title: 'Finance',

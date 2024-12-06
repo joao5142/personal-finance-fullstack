@@ -3,5 +3,5 @@
   "compilerOptions": {
     "verbatimModuleSyntax": false
   },
-  "exclude": ["**/*.stories.ts"]
+  "exclude": ["**/*.stories.ts", "node_modules"]
 }

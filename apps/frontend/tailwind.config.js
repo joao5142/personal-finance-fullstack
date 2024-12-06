@@ -84,10 +84,10 @@ export default {
       },
 
       borderRadius: {
-        small: 'var(--border-radius-small)',
-        medium: 'var(--border-radius-medium)',
-        large: 'var(--border-radius-large)',
-        full: 'var(--border-radius-full)',
+        'app-small': 'var(--border-radius-small)',
+        'app-medium': 'var(--border-radius-medium)',
+        'app-large': 'var(--border-radius-large)',
+        'app-full': 'var(--border-radius-full)',
       },
 
       fontFamily: {
@@ -95,11 +95,11 @@ export default {
       },
 
       fontSize: {
-        'app-preset-1': 'var(--border-radius-xsmall)',
-        'app-preset-2': 'var(--border-radius-xsmall)',
-        'app-preset-3': 'var(--border-radius-xsmall)',
-        'app-preset-4': 'var(--border-radius-xsmall)',
-        'app-preset-5': 'var(--border-radius-xsmall)',
+        'app-preset-1': 'var(--font-size-preset-1)',
+        'app-preset-2': 'var(--font-size-preset-2)',
+        'app-preset-3': 'var(--font-size-preset-3)',
+        'app-preset-4': 'var(--font-size-preset-4)',
+        'app-preset-5': 'var(--font-size-preset-5)',
       },
 
       lineHeight: {
