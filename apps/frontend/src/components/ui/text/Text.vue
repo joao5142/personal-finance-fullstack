@@ -14,6 +14,7 @@ interface Props extends PrimitiveProps {
   size?: TextVariants['size']
   weight?: TextVariants['weight']
   as?: string
+  // eslint-disable-next-line
   class?: HTMLAttributes['class']
 }
 
