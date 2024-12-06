@@ -1,30 +1,51 @@
 <template>
   <div class="p-app-500 flex items-center justify-center w-full max-w-auth mx-auto">
     <Card class="w-full">
-      <Text size="preset1" weight="700">Login</Text>
+      <Text size="preset1" weight="700">Sign Up</Text>
 
-      <form class="mt-10" @submit="onSubmit">
-        <FormField v-slot="{ componentField }" name="username">
+      <form class="mt-10 grid gap-2" @submit="onSubmit">
+        <FormField v-slot="{ componentField }" name="name">
           <FormItem>
-            <FormLabel class="mb-1">Email</FormLabel>
+            <FormLabel>Name</FormLabel>
             <FormControl class="mt-0">
-              <Input type="text" placeholder="shadcn" v-bind="componentField" />
-            </FormControl>
-          </FormItem>
-
-          <FormItem class="mt-3">
-            <FormLabel class="mb-1">Password</FormLabel>
-            <FormControl class="mt-0">
-              <Input type="text" placeholder="shadcn" v-bind="componentField" />
+              <Input type="text" placeholder="Enter your name" v-bind="componentField" />
             </FormControl>
           </FormItem>
         </FormField>
-        <Button class="mt-5 w-full" type="submit">Submit</Button>
+
+        <FormField v-slot="{ componentField }" name="email">
+          <FormItem>
+            <FormLabel>Email</FormLabel>
+            <FormControl class="mt-0">
+              <Input type="text" placeholder="Enter your Email" v-bind="componentField" />
+            </FormControl>
+          </FormItem>
+        </FormField>
+
+        <FormField v-slot="{ componentField }" name="password">
+          <FormItem class="mt-3">
+            <FormLabel>Password</FormLabel>
+            <FormControl class="mt-0 space-y-0">
+              <Input
+                class="mt-0"
+                type="password"
+                placeholder="Enter your password"
+                v-bind="componentField"
+              />
+            </FormControl>
+
+            <FormDescription class="text-end">
+              Password must be at least 8 characters
+            </FormDescription>
+          </FormItem>
+        </FormField>
+
+        <Button class="mt-8 w-full" size="lg" type="submit">Create Account</Button>
 
         <footer>
-          <Text as="span" class="block text-center mt-3">
-            Need to create an account?
-            <Text as="span" weight="700" class="underline">Sign Up</Text>
+          <Text as="span" class="block text-center mt-5">
+            Already have a account?
+            <Text as="span" weight="700" class="underline">Login</Text>
           </Text>
         </footer>
       </form>

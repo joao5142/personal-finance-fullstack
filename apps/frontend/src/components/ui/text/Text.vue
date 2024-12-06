@@ -1,5 +1,9 @@
 <template>
-  <Primitive :as="as" :as-child="asChild" :class="cn(textVariants({ weight, size }), props.class)">
+  <Primitive
+    :as="as"
+    :as-child="asChild"
+    :class="clsx(textVariants({ weight, size }), props.class)"
+  >
     <slot></slot>
   </Primitive>
 </template>
@@ -7,6 +11,7 @@
 <script setup lang="ts">
 import type { HTMLAttributes } from 'vue'
 import { Primitive, type PrimitiveProps } from 'radix-vue'
+import clsx from 'clsx'
 import { type TextVariants, textVariants } from '.'
 import { cn } from '@/lib/utils'
 
