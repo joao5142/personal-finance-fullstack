@@ -41,9 +41,9 @@ export default defineNuxtConfig({
   hooks: {
     'pages:extend'(pages) {
       pages.push({
-        name: 'home',
+        name: 'index',
         path: '/',
-        file: '@/pages/auth/login',
+        redirect: '/auth/login',
       })
 
       // remove @components and @types from router matching inside pages folder

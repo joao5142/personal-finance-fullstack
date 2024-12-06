@@ -51,6 +51,9 @@ export default {
       maxWidth: {
         auth: '560px',
         container: '1500px',
+        'expanded-sidebar': '300px',
+        'collapsed-sidebar': '88px',
+        'sidebar-mobile-height': '72px',
       },
 
       padding: {
@@ -76,16 +79,14 @@ export default {
       },
 
       gap: {
-        app: {
-          500: 'var(--spacing-500)', // 40px
-          400: 'var(--spacing-400)', // 32px
-          300: 'var(--spacing-300)', // 24px
-          250: 'var(--spacing-250)', // 20px
-          200: 'var(--spacing-200)', // 16px
-          150: 'var(--spacing-150)', // 12px
-          100: 'var(--spacing-100)', // 8px
-          50: 'var(--spacing-50)', // 4px
-        },
+        'app-500': 'var(--spacing-500)', // 40px
+        'app-400': 'var(--spacing-400)', // 32px
+        'app-300': 'var(--spacing-300)', // 24px
+        'app-250': 'var(--spacing-250)', // 20px
+        'app-200': 'var(--spacing-200)', // 16px
+        'app-150': 'var(--spacing-150)', // 12px
+        'app-100': 'var(--spacing-100)', // 8px
+        'app-50': 'var(--spacing-50)', // 4px
       },
 
       borderRadius: {

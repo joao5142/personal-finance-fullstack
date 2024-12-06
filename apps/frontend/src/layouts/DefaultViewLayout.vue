@@ -1,10 +1,8 @@
 <template>
-  <div>
-    <aside>aside</aside>
+  <div class="flex h-screen">
+    <Sidebar />
 
-    <header>header</header>
-
-    <main>
+    <main class="flex-1">
       <Container class="my-9">
         <slot></slot>
       </Container>
@@ -15,7 +13,8 @@
 </template>
 
 <script setup lang="ts">
-import Container from '@/components/layout/default/Container.vue'
+import Container from '@/components/layout/container/Container.vue'
+import Sidebar from '@/components/layout/sidebar/Sidebar.vue'
 import AppLoading from '@/components/ui/loading/AppLoading.vue'
 
 const isNavigationExpanded = ref<boolean>(false)

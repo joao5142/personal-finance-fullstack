@@ -40,8 +40,6 @@ import Input from '@/components/ui/input/Input.vue'
 import Card from '@/components/ui/card/Card.vue'
 import Text from '@/components/ui/text/Text.vue'
 import Button from '@/components/ui/button/Button.vue'
-import Container from '@/components/layout/default/Container.vue'
-import FinanceImage from '@/assets/images/logo-large.svg'
 
 import {
   FormControl,
