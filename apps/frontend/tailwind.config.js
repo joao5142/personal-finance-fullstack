@@ -48,6 +48,11 @@ export default {
         },
       },
 
+      maxWidth: {
+        auth: '560px',
+        container: '1500px',
+      },
+
       padding: {
         'app-500': 'var(--spacing-500)', // 40px
         'app-400': 'var(--spacing-400)', // 32px
