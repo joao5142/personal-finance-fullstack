@@ -1,14 +1,42 @@
 {
   "name": "root",
+  "type": "module",
   "private": true,
   "workspaces": [
-    "apps/**"
+    "apps/*"
   ],
   "scripts": {
-    "dev": "lerna run start  --stream"
+    "dev": "lerna run start  --stream",
+    "prepare": "husky install",
+    "lint-staged": "lint-staged",
+    "lint:js": "eslint --ext \".ts,.vue\" --ignore-path .gitignore .",
+    "commit": "cz",
+    "lint:prettier": "prettier --check .",
+    "lint": "npm run lint:js && npm run lint:prettier",
+    "lint:fix": "prettier --write --list-different . && npm run lint:js --fix"
   },
   "dependencies": {},
   "devDependencies": {
-    "lerna": "^8.1.9"
-  }
+    "lerna": "^8.1.9",
+    "husky": "^8.0.3",
+    "@commitlint/cli": "^18.4.4",
+    "@commitlint/config-conventional": "^18.4.4"
+  },
+  "lint-staged": {
+    "*.{js,jsx,vue,ts,tsx}": [
+      "npm run lint:fix"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npx lint-staged",
+      "commit-msg": "npx --no-install commitlint --edit"
+    }
+  },
+  "packageManager": "pnpm@9.14.4+sha512.c8180b3fbe4e4bca02c94234717896b5529740a6cbadf19fa78254270403ea2f27d4e1d46a08a0f56c89b63dc8ebfd3ee53326da720273794e6200fcf0d184ab"
 }
