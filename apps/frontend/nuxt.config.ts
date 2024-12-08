@@ -14,15 +14,12 @@ export default defineNuxtConfig({
       enabled: true,
     },
   },
-  ssr: false,
 
+  ssr: false,
   rootDir: __dirname,
   srcDir: 'src/',
-
   dir: { public: '../public' },
-
   serverDir: '../server',
-
   modulesDir: [resolve(__dirname, '../node_modules/')],
 
   app: {
@@ -126,4 +123,6 @@ export default defineNuxtConfig({
   shadcn: {
     componentDir: './components/ui',
   },
+
+  compatibilityDate: '2024-12-07',
 })

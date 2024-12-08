@@ -61,6 +61,8 @@
     "@phosphor-icons/vue": "^2.1.6",
     "@pinia/nuxt": "^0.4.11",
     "@typescript-eslint/parser": "^6.7.5",
+    "@unovis/ts": "^1.4.5",
+    "@unovis/vue": "^1.4.5",
     "@vee-validate/zod": "^4.14.7",
     "@vue/test-utils": "^2.4.4",
     "@vueuse/core": "^10.11.1",
