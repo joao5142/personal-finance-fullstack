@@ -2,7 +2,7 @@
   <nav
     :class="
       cn(
-        'fixed bottom-0 w-full flex lg:static lg:flex-col pr-app-300 h-sidebar-mobile-height lg:h-full bg-app-grey-900 rounded-br-app-small rounded-tr-app-small',
+        'lg:sticky top-0 lg:h-screen z-10 bottom-0 w-full flex  lg:flex-col pr-app-300 h-sidebar-mobile-height  bg-app-grey-900 rounded-br-app-small rounded-tr-app-small',
         isSidebarCollapsed
           ? 'lg:max-w-collapsed-sidebar px-app-100 lg:px-app-200'
           : 'lg:max-w-expanded-sidebar pr-app-300'
@@ -32,7 +32,7 @@
         class="lg:w-full"
         :class="{ 'lg:mb-app-400': isSidebarCollapsed }"
       >
-        <SidebarItem :item="item" :collapsed="isSidebarCollapsed" />
+        <SidebarItem :item="item" :collapsed="isSidebarCollapsed" @click="item.command" />
       </div>
     </div>
 
@@ -69,6 +69,7 @@ import { cn } from '@/lib/utils'
 const isSidebarCollapsed = ref<boolean>(false)
 
 const route = useRoute()
+const router = useRouter()
 
 const items = computed(() => {
   return [
@@ -76,25 +77,34 @@ const items = computed(() => {
       label: 'Overview',
       image: PhHouse,
       active: route?.path === '/home',
+      command: () => router.push('/home'),
     },
     {
       label: 'Transactions',
       image: PhArrowsDownUp,
+      active: route?.path === '/transactions',
+      command: () => router.push('/transactions'),
     },
 
     {
       label: 'Budget',
       image: PhChartDonut,
+      active: route?.path === '/budget',
+      command: () => router.push('/budget'),
     },
 
     {
       label: 'Pots',
       image: PhJar,
+      active: route?.path === '/pots',
+      command: () => router.push('/pots'),
     },
 
     {
       label: 'Recurring bills',
       image: PhReceipt,
+      active: route?.path === '/bills',
+      command: () => router.push('/bills'),
     },
   ]
 })
