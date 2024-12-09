@@ -1,6 +1,6 @@
-export const TRANSACTIONS_CATEGORIES = {
+export const CATEGORIES = {
   all: {
-    label: 'All Transactions',
+    label: 'All',
     value: 'all',
   },
   entertainment: {
@@ -45,6 +45,6 @@ export const TRANSACTIONS_CATEGORIES = {
   },
 } as const
 
-export type TransactionCategoryValueTypes = keyof typeof TRANSACTIONS_CATEGORIES
+export type CategoryValueTypes = keyof typeof CATEGORIES
 
-export const TRANSACTION_CATEGORIES_VALUES = Object.keys(TRANSACTIONS_CATEGORIES)
+export const CATEGORIES_VALUES = Object.keys(CATEGORIES)
