@@ -38,7 +38,7 @@
               <SelectContent>
                 <SelectGroup>
                   <SelectItem
-                    v-for="(category, index) in TRANSACTIONS_CATEGORIES"
+                    v-for="(category, index) in CATEGORIES"
                     :key="'category' + index"
                     :value="category.value"
                   >
@@ -74,19 +74,18 @@
               </Avatar>
               {{ transaction.recipientOrSender.name }}
             </TableCell>
-            <TableCell>{{ TRANSACTIONS_CATEGORIES[transaction.category].label }}</TableCell>
+            <TableCell>{{ CATEGORIES[transaction.category].label }}</TableCell>
             <TableCell>{{ transaction.date }}</TableCell>
             <TableCell class="text-right">
-              <Text size="preset4" as="strong" weight="700">
-                <span
-                  :class="
-                    clsx(transaction.type == 'deposit' ? 'text-app-green' : 'text-app-grey-900')
-                  "
-                >
-                  <span v-if="transaction.type == 'deposit'">+</span>
-                  <span v-else>-</span>
-                  ${{ transaction.value }}
-                </span>
+              <Text
+                :class="
+                  clsx(transaction.type == 'deposit' ? 'text-app-green' : 'text-app-grey-900')
+                "
+                weight="700"
+              >
+                <span v-if="transaction.type == 'deposit'">+</span>
+                <span v-else>-</span>
+                ${{ transaction.value }}
               </Text>
             </TableCell>
           </TableRow>
@@ -146,11 +145,12 @@ import SelectSeparator from '@/components/ui/select/SelectSeparator.vue'
 import TableFooter from '@/components/ui/table/TableFooter.vue'
 import { AVATARS, AvatarTypes } from '@/constants/avatars'
 import { ITransaction } from '@/types/globals/transaction'
-import { TRANSACTIONS_CATEGORIES } from '@/constants/transactions'
+import { CATEGORIES } from '@/constants/categories'
 import Avatar from '@/components/ui/avatar/Avatar.vue'
 import AvatarImage from '@/components/ui/avatar/AvatarImage.vue'
 import AvatarFallback from '@/components/ui/avatar/AvatarFallback.vue'
 import Button from '@/components/ui/button/Button.vue'
+import Text from '@/components/ui/text/Text.vue'
 
 definePageMeta({
   layout: 'default-view-layout',

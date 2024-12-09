@@ -72,7 +72,7 @@
               created-at="19 Aug 2024"
             />
 
-            <div class="h-[1px] w-full bg-app-grey-100"></div>
+            <Divider />
 
             <TransactionCard
               :person="{ name: 'Savory Bites Bistro', avatar: 'savory' }"
@@ -154,12 +154,13 @@
 <script setup lang="ts">
 import { PhCaretRight, PhTipJar } from '@phosphor-icons/vue'
 import CardMoneyInfo from '../@components/CardMoneyInfo.vue'
-import TransactionCard from './@components/TransactionCard.vue'
+import TransactionCard from '@/pages/@components/TransactionCard.vue'
 import Text from '@/components/ui/text/Text.vue'
 import Card from '@/components/ui/card/Card.vue'
 
 import { DonutChart } from '@/components/ui/chart-donut'
 import { colors } from '@/theme'
+import Divider from '@/components/ui/divider/Divider.vue'
 
 definePageMeta({
   layout: 'default-view-layout',
