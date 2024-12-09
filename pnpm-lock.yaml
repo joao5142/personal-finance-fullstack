@@ -80,6 +80,9 @@ importers:
       axios:
         specifier: ^1.5.1
         version: 1.7.9
+      big.js:
+        specifier: 5.2.2
+        version: 5.2.2
       chart.js:
         specifier: ^4.4.1
         version: 4.4.7
@@ -3857,6 +3860,9 @@ packages:
   big-integer@1.6.52:
     resolution: {integrity: sha512-QxD8cf2eVqJOOz63z6JIN9BzvVs/dlySa5HGSBH5xtR8dPteIRQnBxxKqkNTiT6jbDTF6jAfrd4oMcND9RGbQg==}
     engines: {node: '>=0.6'}
+
+  big.js@5.2.2:
+    resolution: {integrity: sha512-vyL2OymJxmarO8gxMr0mhChsO9QGwhynfuu4+MHTAW6czfq9humCB7rKpUjDd9YUiDPU4mzpyupFSvOClAwbmQ==}
 
   bin-links@4.0.4:
     resolution: {integrity: sha512-cMtq4W5ZsEwcutJrVId+a/tjt8GSbS+h0oNkdl6+6rBuEv8Ot33Bevj5KPm40t309zuhVic8NjpuL42QCiJWWA==}
@@ -14642,6 +14648,8 @@ snapshots:
       open: 8.4.2
 
   big-integer@1.6.52: {}
+
+  big.js@5.2.2: {}
 
   bin-links@4.0.4:
     dependencies:

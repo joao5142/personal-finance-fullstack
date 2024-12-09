@@ -67,6 +67,7 @@
     "@vue/test-utils": "^2.4.4",
     "@vueuse/core": "^10.11.1",
     "axios": "^1.5.1",
+    "big.js": "5.2.2",
     "chart.js": "^4.4.1",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
