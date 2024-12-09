@@ -16,6 +16,9 @@ export default {
       pattern: /bg-app-([\w-]+)/,
       variants: ['before'],
     },
+    {
+      pattern: /w-\[(.*?)\]/,
+    },
   ],
   theme: {
     extend: {
