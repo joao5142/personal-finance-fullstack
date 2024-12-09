@@ -1,15 +1,12 @@
 import { AvatarTypes } from '@/constants/avatars'
-import {
-  TRANSACTION_CATEGORIES_VALUES,
-  TransactionCategoryValueTypes,
-} from '@/constants/transactions'
+import { CATEGORIES_VALUES, CategoryValueTypes } from '@/constants/categories'
 
 export interface ITransaction {
   recipientOrSender: {
     name: string
     avatar: AvatarTypes
   }
-  category: TransactionCategoryValueTypes
+  category: CategoryValueTypes
   date: string
   value: number
   type: 'withdraw' | 'deposit'
