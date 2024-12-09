@@ -25,6 +25,35 @@ export const colors = {
   gold: '#cab361',
   orange: '#be6c49',
   white: '#ffffff',
+} as const
+
+const toTitleCase = (text: string): string => {
+  return text
+    .split(/[\s-]/)
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+    .join(' ')
 }
 
-export type ColorTypes = keyof typeof colors
+interface IColorValues {
+  key: string
+  value: string
+  label: string
+}
+
+export const COLORS_VALUES = Object.entries(colors).flatMap((item: any) => {
+  const [key, value] = item
+
+  if (typeof value === 'object') {
+    return Object.entries(value).map(([subKey, subValue]) => ({
+      key: `${key}-${subKey}`,
+      value: subValue,
+      label: `${toTitleCase(key)} ${subKey}`,
+    }))
+  }
+  return [{ key, value, label: toTitleCase(key) }]
+}) as IColorValues[]
+
+type BeigeVariants = `${'beige'}-${keyof (typeof colors)['beige']}`
+type GreyVariants = `${'grey'}-${keyof (typeof colors)['grey']}`
+
+export type ColorTypes = keyof typeof colors | BeigeVariants | GreyVariants
