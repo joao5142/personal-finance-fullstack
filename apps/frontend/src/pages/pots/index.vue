@@ -1,7 +1,7 @@
 <template>
   <div class="d-flex align-center">
     <header class="flex items-center justify-between">
-      <Text as="strong" size="preset1" weight="700">Overview</Text>
+      <Text as="strong" size="preset1" weight="700">Pots</Text>
       <Button size="lg" @click="handleAddPot">+ Add New Pot</Button>
     </header>
 
