@@ -19,10 +19,15 @@
             </FormControl>
           </FormItem>
         </FormField>
-        <Button class="mt-5 w-full" type="submit">Submit</Button>
+
+        <Button class="mt-5 w-full" @click.prevent="$router.push('/home')">Submit</Button>
 
         <footer>
-          <Text as="span" class="block text-center mt-3">
+          <Text
+            as="span"
+            class="block cursor-pointer text-center mt-3"
+            @click="$router.push('/auth/register')"
+          >
             Need to create an account?
             <Text as="span" weight="700" class="underline">Sign Up</Text>
           </Text>

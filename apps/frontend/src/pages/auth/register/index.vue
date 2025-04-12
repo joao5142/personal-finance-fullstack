@@ -40,10 +40,16 @@
           </FormItem>
         </FormField>
 
-        <Button class="mt-8 w-full" size="lg" type="submit">Create Account</Button>
+        <Button class="mt-8 w-full" size="lg" @click.prevent="$router.push('/auth/login')">
+          Create Account
+        </Button>
 
         <footer>
-          <Text as="span" class="block text-center mt-5">
+          <Text
+            as="span"
+            class="block cursor-pointer text-center mt-5"
+            @click="$router.push('/auth/login')"
+          >
             Already have a account?
             <Text as="span" weight="700" class="underline">Login</Text>
           </Text>
