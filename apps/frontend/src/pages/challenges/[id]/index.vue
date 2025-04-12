@@ -45,7 +45,7 @@
 
               <div class="p-1 gap-1 flex flex-col px-3 relative">
                 <Text as="strong" size="preset2" weight="700">${{ period.value.toFixed(2) }}</Text>
-                <Text as="span" size="preset4">Semana 3</Text>
+                <Text as="span" size="preset4">Week 3</Text>
               </div>
             </Button>
           </div>
