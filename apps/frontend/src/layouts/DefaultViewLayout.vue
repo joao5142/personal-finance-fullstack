@@ -23,15 +23,3 @@ function handleUpdateRail(value: any) {
   isNavigationExpanded.value = value
 }
 </script>
-
-<style scoped>
-.background,
-.v-main {
-  background: rgb(var(--v-theme-background)) !important;
-  min-height: 100vh !important;
-}
-
-.nav {
-  background: rgb(var(--v-theme-sidebar)) !important;
-}
-</style>
