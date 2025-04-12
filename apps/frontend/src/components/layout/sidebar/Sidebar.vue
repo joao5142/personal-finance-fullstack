@@ -2,7 +2,7 @@
   <nav
     :class="
       cn(
-        'lg:sticky top-0 lg:h-screen z-10 bottom-0 w-full flex  lg:flex-col pr-app-300 h-sidebar-mobile-height  bg-app-grey-900 rounded-br-app-small rounded-tr-app-small',
+        'lg:sticky lg:top-0 fixed lg:h-screen z-20 bottom-0 w-full flex  lg:flex-col pr-app-300 h-sidebar-mobile-height  bg-app-grey-900 rounded-br-app-small rounded-tr-app-small',
         isSidebarCollapsed
           ? 'lg:max-w-collapsed-sidebar px-app-100 lg:px-app-200'
           : 'lg:max-w-expanded-sidebar pr-app-300'
@@ -24,7 +24,7 @@
     />
 
     <div
-      class="w-full flex-1 flex flex-row lg:flex-col justify-center items-center lg:justify-start lg:items-start lg:mt-10 gap-5"
+      class="w-full flex-1 flex flex-row lg:flex-col justify-around items-center lg:justify-start lg:items-start lg:mt-10 gap-5"
     >
       <div
         v-for="(item, index) in items"
@@ -58,6 +58,7 @@ import {
   PhReceipt,
   PhArrowFatLinesRight,
   PhArrowFatLinesLeft,
+  PhTarget,
 } from '@phosphor-icons/vue'
 import clsx from 'clsx'
 import SidebarItem from './SidebarItem.vue'
@@ -76,28 +77,35 @@ const items = computed(() => {
     {
       label: 'Overview',
       image: PhHouse,
-      active: route?.path === '/home',
+      active: route?.path.includes('/home'),
       command: () => router.push('/home'),
     },
     {
       label: 'Transactions',
       image: PhArrowsDownUp,
-      active: route?.path === '/transactions',
+      active: route?.path.includes('/transactions'),
       command: () => router.push('/transactions'),
     },
 
     {
       label: 'Budget',
       image: PhChartDonut,
-      active: route?.path === '/budget',
+      active: route?.path.includes('/budget'),
       command: () => router.push('/budget'),
     },
 
     {
       label: 'Pots',
       image: PhJar,
-      active: route?.path === '/pots',
+      active: route?.path.includes('/pots'),
       command: () => router.push('/pots'),
+    },
+
+    {
+      label: 'Finantial challenges',
+      image: PhTarget,
+      active: route?.path.includes('/challenges'),
+      command: () => router.push('/challenges'),
     },
 
     {
