@@ -1,6 +1,9 @@
 <template>
   <div class="grid grid-cols-12">
-    <div class="col-span-12">
+    <header class="flex items-center justify-between">
+      <Text as="strong" size="preset1" weight="700">Transactions</Text>
+    </header>
+    <div class="col-span-12 mt-10">
       <Card>
         <header class="mb-10 flex flex-wrap items-center justify-between gap-4">
           <div class="relative w-full max-w-sm items-center">
