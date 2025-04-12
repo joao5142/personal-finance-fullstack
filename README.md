@@ -33,7 +33,7 @@
 <hr/>
 <img margin-bottom="20px" src="apps/frontend/src/assets/readme/readme4.png">
 
-<h4  style="display: inline_block">Visualização do site :</h4><a style="display: inline_block" target="blank" href="[https://twitter-frontend-theta.vercel.app/](https://personal-finance-fullstack-frontend.vercel.app/home)">Preview na Vercel</a>
+<h4  style="display: inline_block">Visualização do site :</h4><a style="display: inline_block" target="blank" href="https://personal-finance-fullstack-frontend.vercel.app/home">Preview na Vercel</a>
 
 <h2>🧑🏻‍ Autor</h2>
 <p>Feito por João paulo</p>
