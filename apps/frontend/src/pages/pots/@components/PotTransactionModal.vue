@@ -65,7 +65,7 @@
         </form>
 
         <DialogFooter>
-          <Button type="submit" form="dialogForm" class="w-full">
+          <Button form="dialogForm" class="w-full" @click.prevent="model = false">
             <Text v-if="mode == 'withdraw'" as="span">Confirm Withdrawal</Text>
             <Text v-else as="span">Confirm Addition</Text>
           </Button>
