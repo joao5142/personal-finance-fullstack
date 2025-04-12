@@ -145,7 +145,9 @@
         </form>
 
         <DialogFooter>
-          <Button type="submit" form="dialogForm" class="w-full">Save changes</Button>
+          <Button form="dialogForm" class="w-full" @click.prevent="model = false">
+            Save changes
+          </Button>
         </DialogFooter>
       </DialogContent>
     </Dialog>
