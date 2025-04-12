@@ -2,7 +2,7 @@
   <nav
     :class="
       cn(
-        'lg:sticky lg:top-0 fixed lg:h-screen z-20 bottom-0 w-full flex  lg:flex-col pr-app-300 h-sidebar-mobile-height  bg-app-grey-900 rounded-br-app-small rounded-tr-app-small',
+        'lg:sticky lg:top-0 fixed overflow-auto scrollbar-hidden lg:h-screen z-20 bottom-0 w-full flex  lg:flex-col pr-app-300 h-sidebar-mobile-height  bg-app-grey-900 rounded-br-app-small rounded-tr-app-small',
         isSidebarCollapsed
           ? 'lg:max-w-collapsed-sidebar px-app-100 lg:px-app-200'
           : 'lg:max-w-expanded-sidebar pr-app-300'
@@ -38,7 +38,7 @@
 
     <div class="mt-auto pb-app-500 hidden lg:block">
       <SidebarItem
-        class="pb-0"
+        class="pb-0 mt-5"
         :item="{
           label: 'Minimize Menu',
           image: isSidebarCollapsed ? PhArrowFatLinesRight : PhArrowFatLinesLeft,
