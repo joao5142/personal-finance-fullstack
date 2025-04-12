@@ -12,7 +12,7 @@
           </Text>
 
           <div
-            class="grid grid-cols-3 md:grid-cols-4 xl:grid-cols-6 xxl:grid-cols-7 flex-wrap gap-5 mt-4"
+            class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 xxl:grid-cols-7 flex-wrap gap-5 mt-4"
           >
             <Button
               v-for="(period, index) in challengePeriodValues"
