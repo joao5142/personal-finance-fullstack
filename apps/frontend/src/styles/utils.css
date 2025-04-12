@@ -2,4 +2,12 @@
   .detail {
     @apply relative before:top-0  before:left-0 before:w-[4px] before:h-full before:rounded-s-app-small before:absolute;
   }
+
+  .scrollbar-hidden {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .scrollbar-hidden::-webkit-scrollbar {
+    display: none;
+  }
 }
