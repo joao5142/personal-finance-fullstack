@@ -38,6 +38,7 @@
 
     <div class="mt-auto pb-app-500 hidden lg:block">
       <SidebarItem
+        class="pb-0"
         :item="{
           label: 'Minimize Menu',
           image: isSidebarCollapsed ? PhArrowFatLinesRight : PhArrowFatLinesLeft,

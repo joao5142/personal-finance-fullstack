@@ -4,7 +4,8 @@
       cn(
         'transition-all group flex flex-col lg:flex-row  items-center lg:items-start  gap-app-200  cursor-pointer rounded-br-app-small rounded-tr-app-small',
         { 'group/active  lg:bg-app-beige-100': item.active },
-        collapsed ? 'justify-center lg:bg-transparent' : 'lg:px-app-400 py-app-200'
+        collapsed ? 'justify-center lg:bg-transparent' : 'lg:px-app-400 py-app-200',
+        props.class
       )
     "
   >
@@ -47,8 +48,9 @@ interface IProps {
     image: any
     active?: boolean
   }
+  class: string
 }
-withDefaults(defineProps<IProps>(), {
+const props = withDefaults(defineProps<IProps>(), {
   collapsed: true,
 })
 </script>
