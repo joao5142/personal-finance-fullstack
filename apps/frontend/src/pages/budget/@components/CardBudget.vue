@@ -24,7 +24,7 @@
       </div>
 
       <div class="mt-5">
-        <Text as="span" class="text-app-grey-500" size="preset4">Maximum of $50.00</Text>
+        <Text as="span" class="text-app-grey-500 block mb-2" size="preset4">Maximum of $50.00</Text>
       </div>
     </header>
 
@@ -32,7 +32,7 @@
       <Progress :model-value="33" class="w-full" :color="item.theme" />
     </div>
 
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+    <div class="mt-5 grid grid-cols-1 lg:grid-cols-2 gap-4">
       <CardMoneyInfo :item="{ label: 'Spent', value: 15, theme: item.theme }" />
       <CardMoneyInfo :item="{ label: 'Remaining', value: 2, theme: 'beige-100' }" />
     </div>
@@ -79,7 +79,7 @@ import { CategoryValueTypes, CATEGORIES } from '@/constants/categories'
 import { ColorTypes } from '@/theme'
 import Card from '@/components/ui/card/Card.vue'
 import Progress from '@/components/ui/progress/Progress.vue'
-import CardMoneyInfo from '@/pages/@components/CardMoneyInfo.vue'
+import CardMoneyInfo from '@/pages/@components/CardValueInfo.vue'
 import TransactionCard from '@/pages/@components/TransactionCard.vue'
 import Divider from '@/components/ui/divider/Divider.vue'
 import { ITransaction } from '@/types/globals/transaction'

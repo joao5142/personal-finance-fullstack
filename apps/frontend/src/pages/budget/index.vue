@@ -61,7 +61,7 @@
 
 <script setup lang="ts">
 import { PhCaretRight } from '@phosphor-icons/vue'
-import CardMoneyInfo from '../@components/CardMoneyInfo.vue'
+import CardMoneyInfo from '../@components/CardValueInfo.vue'
 import CardSpendingInfo from './@components/CardSpendingInfo.vue'
 import CardBudget from './@components/CardBudget.vue'
 import SaveBudgetModal from './@components/SaveBudgetModal.vue'
