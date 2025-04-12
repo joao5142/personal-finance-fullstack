@@ -149,6 +149,9 @@ importers:
       vue-chartjs:
         specifier: ^5.3.0
         version: 5.3.2(chart.js@4.4.7)(vue@3.5.13(typescript@5.7.2))
+      vue-dragscroll:
+        specifier: ^4.0.6
+        version: 4.0.6(typescript@5.7.2)
       zod:
         specifier: ^3.23.8
         version: 3.23.8
@@ -9732,6 +9735,9 @@ packages:
   vue-component-type-helpers@2.1.10:
     resolution: {integrity: sha512-lfgdSLQKrUmADiSV6PbBvYgQ33KF3Ztv6gP85MfGaGaSGMTXORVaHT1EHfsqCgzRNBstPKYDmvAV9Do5CmJ07A==}
 
+  vue-component-type-helpers@2.2.0:
+    resolution: {integrity: sha512-cYrAnv2me7bPDcg9kIcGwjJiSB6Qyi08+jLDo9yuvoFQjzHiPTzML7RnkJB1+3P6KMsX/KbCD4QE3Tv/knEllw==}
+
   vue-demi@0.14.10:
     resolution: {integrity: sha512-nMZBOwuzabUO0nLgIcc6rycZEebF6eeUfaiQx9+WSk8e29IbLvPU9feI6tqW4kTo3hvoYAJkMh8n8D0fuISphg==}
     engines: {node: '>=12'}
@@ -9750,6 +9756,9 @@ packages:
     resolution: {integrity: sha512-n9ENAcs+40awPZMsas7STqjkZiVlIjxIKgiJr5rSohDP0/JCrD9VtlzNojafsA1MChm/hz2h3PDtUedx3lbgfA==}
     peerDependencies:
       vue: '>=2'
+
+  vue-dragscroll@4.0.6:
+    resolution: {integrity: sha512-zW1k58p41yhmFhmg/JxfesUM4Srl0JfXg7xSINqffVGpHJKvnEHMK4QgF6mUVkPMTgibn976fhPYkomcXPvvFA==}
 
   vue-eslint-parser@9.4.3:
     resolution: {integrity: sha512-2rYRLWlIpaiN8xbPiDyXZXRgLGOtWxERV7ND5fFAv5qo1D2N9Fu9MNajBNc6o13lZ+24DAWCkQCvj4klgmcITg==}
@@ -13383,7 +13392,7 @@ snapshots:
       ts-dedent: 2.2.0
       type-fest: 2.19.0
       vue: 3.5.13(typescript@5.7.2)
-      vue-component-type-helpers: 2.1.10
+      vue-component-type-helpers: 2.2.0
     transitivePeerDependencies:
       - encoding
       - supports-color
@@ -21569,6 +21578,8 @@ snapshots:
 
   vue-component-type-helpers@2.1.10: {}
 
+  vue-component-type-helpers@2.2.0: {}
+
   vue-demi@0.14.10(vue@3.5.13(typescript@5.7.2)):
     dependencies:
       vue: 3.5.13(typescript@5.7.2)
@@ -21590,6 +21601,12 @@ snapshots:
       ts-map: 1.0.3
       vue: 3.5.13(typescript@5.7.2)
       vue-inbrowser-compiler-independent-utils: 4.71.1(vue@3.5.13(typescript@5.7.2))
+
+  vue-dragscroll@4.0.6(typescript@5.7.2):
+    dependencies:
+      vue: 3.5.13(typescript@5.7.2)
+    transitivePeerDependencies:
+      - typescript
 
   vue-eslint-parser@9.4.3(eslint@8.57.1):
     dependencies:
