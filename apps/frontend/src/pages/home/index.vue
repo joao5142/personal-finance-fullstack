@@ -153,7 +153,7 @@
 
 <script setup lang="ts">
 import { PhCaretRight, PhTipJar } from '@phosphor-icons/vue'
-import CardMoneyInfo from '../@components/CardMoneyInfo.vue'
+import CardMoneyInfo from '../@components/CardValueInfo.vue'
 import TransactionCard from '@/pages/@components/TransactionCard.vue'
 import Text from '@/components/ui/text/Text.vue'
 import Card from '@/components/ui/card/Card.vue'

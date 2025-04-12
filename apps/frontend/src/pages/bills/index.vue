@@ -132,26 +132,7 @@
             </TableBody>
           </Table>
 
-          <footer class="flex items-center justify-between mt-10">
-            <Button variant="outline" @click="handleGetPrevPage">
-              <PhCaretLeft class="mr-2" weight="fill" />
-              Prev
-            </Button>
-            <div class="flex items-center gap-1">
-              <Button
-                v-for="(item, index) in pagination.final_page"
-                :key="'pagination-item' + index"
-                :variant="pagination.page == item ? 'default' : 'outline'"
-                @click="() => handleSelectPage(item)"
-              >
-                {{ item }}
-              </Button>
-            </div>
-            <Button variant="outline" @click="handleGetNextPage">
-              Next
-              <PhCaretRight class="ml-2" weight="fill" />
-            </Button>
-          </footer>
+          <Paginator />
         </Card>
       </div>
     </div>
@@ -171,6 +152,7 @@ import clsx from 'clsx'
 import Card from '@/components/ui/card/Card.vue'
 import Text from '@/components/ui/text/Text.vue'
 import Divider from '@/components/ui/divider/Divider.vue'
+import Paginator from '@/pages/@components/Paginator.vue'
 
 import {
   Table,
@@ -204,8 +186,6 @@ definePageMeta({
   layout: 'default-view-layout',
 })
 
-const { pagination, paginationNextPage, paginationPrevPage } = usePagination()
-
 const bills: IBill[] = [
   {
     company: {
@@ -227,18 +207,6 @@ const bills: IBill[] = [
     status: 'pending',
   },
 ]
-
-function handleGetNextPage() {
-  paginationNextPage()
-}
-
-function handleGetPrevPage() {
-  paginationPrevPage()
-}
-
-function handleSelectPage(item: number) {
-  pagination.value.page = item
-}
 </script>
 
 <style scoped></style>
